@@ -64,6 +64,11 @@ header {
   .user {
     display: flex;
     align-items: center;
+    gap: 5px;
+
+    > span {
+      font-weight: 500;
+    }
     button {
       display: flex;
       background-color: transparent;
@@ -72,6 +77,57 @@ header {
       padding: 5px;
       img {
         width: 16px;
+      }
+    }
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 5px;
+  display: inline-block;
+
+  &.menu-burguer {
+    background-image: url('../assets/menu.png');
+  }
+  &.user-logo {
+    background-image: url('../assets/user.png');
+  }
+  &.star {
+    background-image: url('../assets/star.png');
+  }
+  &.heart {
+    background-image: url('../assets/heart.svg');
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  gap: 10px;
+  .col {
+    padding: 0 5px;
+    &-6 {
+      width: calc(50% - 10px);
+    }
+    @media only screen and (min-width: 768px) {
+      &-md {
+        &-4 {
+          width: calc(25% - 10px);
+        }
+      }
+      
+    }
+    @media only screen and (min-width: 1920px) {
+      &-lg {
+        &-2 {
+          width: calc(10% - 10px);
+        }
       }
     }
   }

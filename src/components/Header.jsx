@@ -1,5 +1,4 @@
 import React from 'react';
-import UserLogo from "../assets/user.png"
 import SearchIcon from "../assets/magnifying-glass.png"
 import Logo from "../assets/airbnb-logo.png"
 
@@ -29,7 +28,8 @@ const Header = () => {
 
         </div>
         <button>
-          <img src={UserLogo} alt="" />
+          <span className="icon menu-burguer"></span>
+          <span className="icon user-logo"></span>
         </button>
       </div>
     </header>
