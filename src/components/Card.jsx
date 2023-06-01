@@ -30,7 +30,7 @@ export const Card = ({info, lat, long}) => {
       </Carousel>
       <div className="card-body">
         <div className="title">
-          <h3>{info.title}</h3>
+          <h3>{info.location.city}, {info.location.country.title}</h3>
           <span className="rating">
             <span className="icon star"></span>
             {info.ratings.value}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Linsting = () => {
+const Listings = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Linsting = () => {
   )
 }
 
-export default Linsting
+export default Listings

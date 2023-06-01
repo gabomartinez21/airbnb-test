@@ -1,9 +1,15 @@
+.Home {
+  padding: 20px 0 40px;
+}
 
 .card {
   position: relative;
 
   .like {
     position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 2;
   }
   .img-carousel {
     background-position: center center;
@@ -30,11 +36,12 @@
       }
     }
   }
-  p, .price {
+  p {
     color: #989898;
     font-size: 14px;
   }
   .price {
+    font-size: 15px;
     margin-top: 6px;
     span {
       font-weight: 500;
