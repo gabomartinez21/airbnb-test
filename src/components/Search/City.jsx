@@ -4,7 +4,16 @@ import { LocationContext } from '../../context/locationContext'
 const City = ({setCity, city}) => {
 
   const [showModal, setShowModal] = useState(false)
-  const [locations] = useContext(LocationContext)
+  const {locations}  = useContext(LocationContext)
+
+  const handleSearchInput = (e) => {
+    const searchValue = e.target.value;
+    setCity(searchValue)
+    const findLocations = searchValue.find(searchItem => searchItem.city.includes(searchValue))
+
+    console.log(findLocations)
+
+  }
 
   return (
     <div className="menu-box">
@@ -16,7 +25,7 @@ const City = ({setCity, city}) => {
             value={city}
             placeholder='Search destination'
             onClick={() => setShowModal(true)}
-            onChange={e => setCity(e.target.value)}
+            onChange={handleSearchInput}
           />   
         </div>
         {showModal && city !== '' && (

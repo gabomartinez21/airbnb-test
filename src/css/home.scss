@@ -7,9 +7,13 @@
 
   .like {
     position: absolute;
-    top: 20px;
+    top: 18px;
     right: 10px;
     z-index: 2;
+    span {
+      width:20px;
+      height: 20px;
+    }
   }
   .img-carousel {
     background-position: center center;
