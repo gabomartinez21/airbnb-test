@@ -6,7 +6,7 @@ const SearchBar = () => {
   const [city, setCity] = useState('')
   return (
     <div className='SearchBar'>
-      <City setCity={setCity} />
+      <City setCity={setCity} city={city}/>
     </div>
   )
 }

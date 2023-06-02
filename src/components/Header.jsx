@@ -15,7 +15,6 @@ const Header = () => {
     <header className={headerOverlay.join(' ')}>
       <div className="header-block">
         <div className="nav">
-
           <div className="logo">
             <img src={Logo} alt="" />
           </div>

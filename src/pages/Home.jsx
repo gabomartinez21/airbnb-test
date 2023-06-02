@@ -24,7 +24,7 @@ const Home = () => {
     setCategories(listings.categories)
   }, [])
 
-  console.log(list)
+  
   return (
     <div className="Home">
       <div className="row">

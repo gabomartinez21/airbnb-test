@@ -11,3 +11,5 @@ export const calculateDistance = (lat, long, point) => {
 
   return distance.toFixed(1);
 }
+
+ 
