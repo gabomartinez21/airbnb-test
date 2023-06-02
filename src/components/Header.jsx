@@ -18,22 +18,36 @@ const Header = () => {
           <div className="logo">
             <img src={Logo} alt="" />
           </div>
-          <button type="button" onClick={handleSearch}>
-            <ul className="search-block">
+          {!headerOverlay.includes('search-open') ? (
+            <button type="button" onClick={handleSearch}>
+              <ul className="search-block">
+                <li>
+                  <a href="#">Anywhere</a>
+                </li>
+                <li>
+                  <a href="#">Any week</a>
+                </li>
+                <li>
+                  <a href="#">Add guests</a>
+                  <button>
+                    <img src={SearchIcon} alt="" />
+                  </button>
+                </li>
+              </ul>
+            </button>
+          ): (
+            <ul className='open-menu'>
               <li>
-                <a href="#">Anywhere</a>
+                <a href="#">Stays</a>
               </li>
               <li>
-                <a href="#">Any week</a>
+                <a href="#">Experiences</a>
               </li>
               <li>
-                <a href="#">Add guests</a>
-                <button>
-                  <img src={SearchIcon} alt="" />
-                </button>
+                <a href="#">Onlines Expriences</a>
               </li>
             </ul>
-          </button>
+          )}
           <div className="user">
             <span className="slogan">Airbnb your home</span>
             <div className="languages">
@@ -46,7 +60,7 @@ const Header = () => {
           </div>
         </div>
         {headerOverlay.includes('search-open') && (
-          <SearchBar />
+          <SearchBar/>
         )}
       </div>
     </header>

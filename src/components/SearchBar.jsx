@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
 import City from './Search/City'
+import Calendar from './Search/Calendar'
 
 const SearchBar = () => {
 
-  const [city, setCity] = useState('')
+  const [barClass, setBarClass] = useState(['SearchBar'])
+  const [city, setCity] = useState('');
+
+
+
   return (
-    <div className='SearchBar'>
-      <City setCity={setCity} city={city}/>
+    <div className={barClass.join(' ')}>
+      <City setCity={setCity} city={city} setBarClass={setBarClass} barClass={barClass}/>
+      <Calendar setBarClass={setBarClass} barClass={barClass}/>
     </div>
   )
 }

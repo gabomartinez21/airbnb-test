@@ -47,6 +47,24 @@ header {
         border: none;
         background-color: transparent;
       }
+      .open-menu {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        min-width: 365px;
+        gap: 15px;
+        li {
+          a {
+            color: #333;
+            padding: 3px 5px;
+          }
+          &:first-of-type {
+            a {
+              border-bottom: 1px solid #333;
+            }
+          }
+        }
+      }
       ul.search-block {
         display: flex;
         list-style: none;
@@ -109,20 +127,34 @@ header {
 .SearchBar {
   width: 100%;
   max-width: 850px;
-  background-color: #dddddd;
   border-radius: 40px;
   border: 1px solid #979797;
+  background-color: #fff;
+  z-index: 20;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  &.focus {
+    background-color: #dddddd;
+  }
   .menu-box {
     position: relative;
+    &.calendar {
+      display: flex;
+    }
     .input-box {
       padding: 10px 25px;
-      background-color: #fff;
+      background-color: transparent;
       border-radius: 50px;
       display: flex;
       justify-content: space-between;
+      height: 100%;
       align-items: center;
+      &:hover {
+        background-color: #e0e0e0;
+      }
+      &.selected {
+        background-color: #fff;
+      }
       > div {
         display: flex;
         flex-direction: column;
@@ -133,6 +165,7 @@ header {
         }
         input {
           border: none;
+          background-color: transparent;
           outline: 0;
           font-size: 15px;
         }
@@ -158,7 +191,22 @@ header {
         padding: 0;
         list-style: none;
         li {
-          padding: 5px 30px;
+          padding: 5px 10px;
+          display: flex;
+          align-items: center;
+          &:hover {
+            background-color: #e0e0e0;
+          }
+          span {
+            border-radius: 10px;
+            background-color: #e3e3e3;
+            padding: 18px;
+            background-size: 16px 16px;
+          }
+          a {
+            display: inline-block;
+            color: #333;
+          }
         }
       }
     }

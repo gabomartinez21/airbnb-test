@@ -9,6 +9,7 @@ export const LocationProvider = ({children}) => {
 
   useEffect(() => {
     const locationsData = getLocations(listings.data)
+    setLocations(locationsData)
   }, []);
 
   const getLocations = (data) => {
@@ -27,6 +28,7 @@ export const LocationProvider = ({children}) => {
         locationsSeparate[info.location.country.code] = locationsSeparate[info.location.country.code].concat(locationItem)
       }
     })
+    return locationsSeparate;
   }
 
   return (
